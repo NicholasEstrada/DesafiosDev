@@ -12,8 +12,9 @@ function SearchNumber($array) {
 
     for ($i = $min; $i < $max; $i++) {
         if (!in_array($i, $array)) {
-            $posicao = array_search($i - 1, $array) + 1;
-            $missingNumber[$posicao] = $i;
+            $position = array_search($i - 1, $array) + 1;
+            $missingNumber[$position] = $i;
+            array_splice($array, $position, 0, $i);
         }
     }
 
@@ -24,7 +25,7 @@ function SearchNumber($array) {
 $test = array(
     array(1, 2, 3, 6, 7, 8),
     array(10, 12, 13, 15, 16),
-    array(12,30)
+    array(12,18,30)
 );
 
 foreach($test as $array){
