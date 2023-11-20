@@ -30,7 +30,8 @@
 
  $test = array(
     array(2, 7, 7, 1, 8, 2, 7, 8, 7),
-    array(5, 3, 4, 3, 5, 5, 3)
+    array(5, 3, 4, 3, 5, 5, 3),
+    array(5, 3, 4, 3, 4)
 );
 
 foreach($test as $array){
